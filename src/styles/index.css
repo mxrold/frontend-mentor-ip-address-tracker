@@ -85,6 +85,10 @@ html {
     height: 74vh;
 }
 
+#map {
+    height: 180px;
+}
+
 .no-map {
     display: flex;
     flex-direction: column;

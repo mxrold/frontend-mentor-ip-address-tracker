@@ -6,6 +6,12 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../src/assets/favicon-32x32.png">
   <title>Frontend Mentor | IP Address Tracker</title>
   <link rel="stylesheet" href="/src/styles/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/> 
+ <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
 </head>
 <body>
   <div class="app">
@@ -19,6 +25,7 @@
       </div>
     </section>
     <section class="map">
+      <div id="map"></div>
       <div class="no-map">
         <p>There is no any search yet...<br> <span>Let's do it now </span></p>
         <img src="../src/assets/no-map.svg" alt="Image no map">
@@ -32,5 +39,7 @@
   Timezone
     UTC <!-- add offset value dynamically using the API -->
   ISP
+
+  <script type="module" src="../src/index.js"></script>
 </body>
 </html>
