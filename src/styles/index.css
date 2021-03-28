@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+:root {
+   --veryDarkGray: hsl(0, 0%, 17%);
+   --darkGray: hsl(0, 0%, 59%);
+   --justWhite: #f7f3f3;
+   --blueColor: #515fc2;
+   --secondaryColor: #3ee275;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* ------------ */
+
+.app {
+    width: 100%;
+    min-width: 320px;
+    max-width: 1440px;
+    height: 100vh;
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 25vh;
+    margin: 0 auto;
+    padding: 20px 0;
+    background: url(../assets/pattern-bg.png) center no-repeat;
+    box-shadow: 0px 2px 7px 2px var(--darkGray);
+}
+
+.address__title {
+    margin-bottom: 12px;
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: var(--justWhite);
+}
+
+.address__input {
+    display: inherit;
+    width: 90%;
+    max-width: 750px;
+    height: 36px;
+}
+
+.address__input input {
+    width: 90%;
+    height: 100%;
+    padding-left: 12px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    background-color: var(--justWhite);
+    color: var(--veryDarkGray);
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    outline: none;
+}
+
+.address__input button {
+    width: 10%;
+    height: 100%;
+    background-color: var(--veryDarkGray);
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.map {
+    width: 100%;
+    height: 74vh;
+}
+
+.no-map {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.no-map p {
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--veryDarkGray);
+    text-align: center;
+}
+
+.no-map span {
+    border-bottom: 2px solid var(--secondaryColor);
+}
+
+.no-map img {
+    width: 90%;
+    max-width: 380px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.map__footer {
+    width: 100%;
+    height: 1vh;
+    background-color: var(--blueColor);
+}
+
+@media screen and (min-width: 920px) {
+    .address__title {
+        font-size: 2.4rem;
+    }
+
+    .address__input input {
+        font-size: 1.6em;
+    }    
+
+    .no-map p {
+        font-size: 1.6rem;
+    }
+}

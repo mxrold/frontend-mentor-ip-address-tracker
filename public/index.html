@@ -5,16 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="../src/assets/favicon-32x32.png">
   <title>Frontend Mentor | IP Address Tracker</title>
+  <link rel="stylesheet" href="/src/styles/index.css">
 </head>
 <body>
   <div class="app">
     <section class="address">
       <h1 class="address__title">IP Address Tracker</h1>
-      <div class="address__title--input">
+      <div class="address__input">
         <input type="text" placeholder="Search for any IP address or domain">
+        <button type="button">
+          <img src="../src/assets/icon-arrow.svg" alt="Arrow icon search">
+        </button>
       </div>
     </section>
-    <section class="map"></section>
+    <section class="map">
+      <div class="no-map">
+        <p>There is no any search yet...<br> <span>Let's do it now </span></p>
+        <img src="../src/assets/no-map.svg" alt="Image no map">
+      </div>
+      <div class="map__footer"></div>
+    </section>
   </div>
   
   IP Address
