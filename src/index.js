@@ -1,10 +1,19 @@
-const myMap = L.map('map').setView([51.505, -0.09], 13);
+import { fetchData } from './utils/fetchData.js';
 
-L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 18,
-    id: 'mapbox/streets-v11',
-    tileSize: 512,
-    zoomOffset: -1,
-    accessToken: 'pk.eyJ1IjoibWFydGlucm9sIiwiYSI6ImNrbXNnZHMxeTA0czIycHBhNzR5aHpqMWQifQ.0CcMlmyAToFV--DF77lNpw'
-}).addTo(myMap);
+const API = 'https://geo.ipify.org/api/v1?';
+const API_KEY = 'apiKey=at_e2oyge0E3xtR3lT3UpEB8kEScEdY1';
+
+const btn = document.querySelector('button');
+const input = document.querySelector('input');
+
+const getInputData = e => {
+    e.preventDefault();
+    
+    const validateInput = input.value.trim().toLocaleLowerCase();
+    fetchData(API, API_KEY, validateInput);
+}
+
+btn.addEventListener('click', getInputData);
+
+
+

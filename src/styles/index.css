@@ -3,9 +3,10 @@
 :root {
    --veryDarkGray: hsl(0, 0%, 17%);
    --darkGray: hsl(0, 0%, 59%);
+   --lightGray: #cfc8c8;
    --justWhite: #f7f3f3;
    --blueColor: #515fc2;
-   --secondaryColor: #3ee275;
+   --secondaryColor: #ffc93c;
 }
 
 * {
@@ -25,7 +26,8 @@ html {
     width: 100%;
     min-width: 320px;
     max-width: 1440px;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
 }
 
 .address {
@@ -34,7 +36,7 @@ html {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 25vh;
+    height: max-content;
     margin: 0 auto;
     padding: 20px 0;
     background: url(../assets/pattern-bg.png) center no-repeat;
@@ -82,11 +84,13 @@ html {
 
 .map {
     width: 100%;
+    min-height: 420px;
     height: 74vh;
 }
 
-#map {
-    height: 180px;
+.map__node {
+    width: 100%;
+    height: 100%;
 }
 
 .no-map {
@@ -98,7 +102,17 @@ html {
     margin: 0 auto;
 }
 
-.no-map p {
+.map__notfound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.no-map p,
+.map__notfound p {
     margin-bottom: 12px;
     font-size: 1.4rem;
     font-weight: 400;
@@ -110,20 +124,74 @@ html {
     border-bottom: 2px solid var(--secondaryColor);
 }
 
-.no-map img {
+.no-map img,
+.map__notfound img {
     width: 90%;
     max-width: 380px;
     height: auto;
     margin: 0 auto;
 }
 
-.map__footer {
+
+.footer {
     width: 100%;
-    height: 1vh;
+    min-height: 1vh;
+    height: max-content;
+    padding: 20px;
     background-color: var(--blueColor);
 }
 
+.footer__info {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-row-gap: 10px;
+    width: 100%;
+    height: max-content;
+    padding: 12px;
+    background-color: var(--justWhite);
+    border-radius: 7px;
+    text-align: center;
+}
+
+.footer__info--item p{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--darkGray);
+}
+
+.footer__info--item span {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--veryDarkGray);
+}
+
+.separator {
+    width: 50%;
+    height: 2px;
+    margin: 0 auto;
+    background-color: var(--lightGray);
+}
+
+
+@media screen and (min-width: 720px) {
+    .footer__info {
+        grid-template: 1fr / repeat(4, 1fr);
+    }
+
+    .footer__info--item:not(.footer__info--item:last-child) {
+        border-right: 2px solid var(--lightGray);
+    }
+
+    .separator {
+        width: 0%;
+    }
+}
+
 @media screen and (min-width: 920px) {
+    .address {
+        height: 20vh;
+    }
+
     .address__title {
         font-size: 2.4rem;
     }
@@ -132,7 +200,15 @@ html {
         font-size: 1.6em;
     }    
 
+    .map {
+        height: 65vh;
+    }
+
     .no-map p {
         font-size: 1.6rem;
+    }
+
+    .footer {
+        min-height: 15vh;
     }
 }
