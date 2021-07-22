@@ -5,7 +5,9 @@ export const map = response => {
     const myMap = document.createElement('div');
     myMap.id='map';
     myMap.classList.add('map__node');
-    node.replaceChild(myMap, nodeDelete); 
+
+    nodeDelete.remove()
+    node.append(myMap)
 
     const map = L.map('map').setView([response.location.lat, response.location.lng], 13);
 

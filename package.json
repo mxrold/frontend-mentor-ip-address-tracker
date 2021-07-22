@@ -9,7 +9,5 @@
   "keywords": [],
   "author": "Martin Roldan <martinroldan889@gmail.com>",
   "license": "ISC",
-  "dependencies": {
-    "leaflet": "^1.7.1"
-  }
+  "dependencies": {}
 }
