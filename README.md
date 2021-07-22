@@ -3,8 +3,6 @@
 In this project, you can check where an IP address is just by typing in the IP or domain numbers. It will display data on a map.
 
 
-![Design preview for the IP address tracker coding challenge](./design/desktop-preview.jpg)
-
 ## Preview 🖼
 
 ![Design preview](./design/desktop-design.png)
